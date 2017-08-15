@@ -2,21 +2,22 @@ package light;
 
 import base.Command;
 
-public class LightOffCommand implements Command{
-	Light light;
-	
-	public LightOffCommand(Light light) {
-		this.light = light;
-	}
-	
-	@Override
-	public void execute() {
-		light.off();
-	}
+public class LightOffCommand implements Command {
 
-	@Override
-	public void undo() {
-		light.on();
-	}
+    private Light light;
+
+    public LightOffCommand(Light light) {
+        this.light = light;
+    }
+
+    @Override
+    public void execute() {
+        light.off();
+    }
+
+    @Override
+    public void undo() {
+        light.on();
+    }
 
 }
