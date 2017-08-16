@@ -1,19 +1,20 @@
 
-public class Breakfast extends RoomDecorator{
-	Room room;
-	
-	public Breakfast(Room room) {
-		this.room = room;
-	}
+public class Breakfast extends RoomDecorator {
 
-	@Override
-	public String getDescription() {
-		return room.getDescription().concat(", with Breakfast");
-	}
+    private Room room;
 
-	@Override
-	public double costPerNight() {
-		return 5 + room.costPerNight();
-	}
+    public Breakfast(Room room) {
+        this.room = room;
+    }
+
+    @Override
+    public String getDescription() {
+        return room.getDescription().concat(", with Breakfast");
+    }
+
+    @Override
+    public double costPerNight() {
+        return 5 + room.costPerNight();
+    }
 
 }
